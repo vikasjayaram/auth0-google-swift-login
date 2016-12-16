@@ -23,7 +23,6 @@
 
 import UIKit
 import Lock
-import Auth0
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
