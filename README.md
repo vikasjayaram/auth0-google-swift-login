@@ -11,6 +11,31 @@ This sample project shows how to present a login dialog using the Lock widget in
   pod 'Lock/Safari'
 ```
 
+##### Perform Social Authentication with SafariAuthenticator
+
+First, go to your Client Dashboard and make sure that Allowed Callback URLs contains the following:
+
+```
+{YOUR_APP_BUNDLE_IDENTIFIER}:///ios/{YOUR_APP_BUNDLE_IDENTIFIER}/callback
+``` 
+In your application's Info.plist file, register your iOS Bundle Identifier as a custom scheme. To do so, open the Info.plist as source code, and add this chunk of code under the main <dict> entry:
+
+```
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+        <key>CFBundleTypeRole</key>
+        <string>None</string>
+        <key>CFBundleURLName</key>
+        <string>auth0</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>{YOUR_APP_BUNDLE_IDENTIFIER}</string>
+        </array>
+    </dict>
+</array>
+```
+
 ##### 1. Initialise Safari Authenticator in AppDelegate
 ```swift
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
