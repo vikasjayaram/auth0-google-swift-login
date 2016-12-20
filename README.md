@@ -2,8 +2,6 @@
 
 This sample project shows how to present a login dialog using the Lock widget interface. Once you log in, you're taken to a very basic profile screen, with some data about your user.
 
-#### Important Snippets
-
 ##### Required Dependencies
 
 ```swift
@@ -35,6 +33,8 @@ In your application's Info.plist file, register your iOS Bundle Identifier as a 
     </dict>
 </array>
 ```
+
+#### Important Snippets
 
 ##### 1. Initialise Safari Authenticator in AppDelegate
 ```swift
